@@ -22,7 +22,7 @@
 
 <li class="menu-item {{$pages=='jasa'?'active': ''}}">
     <a href="{{route('admin.jasa')}}" class="menu-link">
-        <i class="menu-icon fa-solid fa-address-book"></i>
+        <i class="menu-icon fa-solid fas fa-hands-helping"></i>
         <div data-i18n="Support">Jasa</div>
     </a>
 </li>

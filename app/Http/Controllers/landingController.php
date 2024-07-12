@@ -47,6 +47,26 @@ class landingController extends Controller
     public function jasa(){
         $pages='jasa';
         $items=ServiceRequest::all();
-        return view('pages.landing.produk.jasa',compact('items','pages'));
+        return view('pages.landing.produk.jasa',compact('items','pages'));  
+    }
+    public function store(Request $request)
+    {
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required',
+            'phone' => 'required',
+            'service_type' => 'required',
+            'description' => 'required',
+        ]);
+
+        ServiceRequest::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'phone' => $request->phone,
+            'service_type' => $request->service_type,
+            'description' => $request->description,
+        ]);
+
+        return redirect()->route('jasa')->with('status', 'Data berhasil ditambahkan!')->with('tipe', 'success')->with('icon', 'fas fa-feather');
     }
 }

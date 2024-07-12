@@ -25,6 +25,6 @@ class jasaForm extends Component
      */
     public function render()
     {
-        return view('components.jasa.jasa-form');
+        return view('components..jasa.jasa-form');
     }
 }

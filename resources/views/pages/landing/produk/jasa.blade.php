@@ -65,7 +65,7 @@ Beranda
         <div class="row justify-content-center">
             <div class="col-12 col-md-8">
                 <h2 class="display-4 mb-4 text-center animate__animated animate__fadeInDown">Formulir Pengajuan Jasa</h2>
-                <form action="{{ route('jasa') }}" method="POST" class="animate__animated animate__fadeInUp">
+                <form action="{{ route('jasa.store') }}" method="POST" class="animate__animated animate__fadeInUp">
                     @csrf
                     <div class="form-group">
                         <label for="name">Nama</label>

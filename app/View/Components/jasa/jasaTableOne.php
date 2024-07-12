@@ -25,6 +25,6 @@ class jasaTableOne extends Component
      */
     public function render()
     {
-        return view('components.jasa.jasa-table-one');
+        return view('components..jasa.jasa-table-one');
     }
 }

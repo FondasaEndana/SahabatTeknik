@@ -16,3 +16,4 @@ Route::get('/keranjang', [landingController::class, 'keranjang'])->name('keranja
 
 
 Route::get('/jasa', [landingController::class, 'jasa'])->name('jasa');
+Route::post('/jasa', [landingController::class, 'store'])->name('jasa.store');
