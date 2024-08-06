@@ -8,7 +8,7 @@
                     <font size="14px"> Sahabat Teknik - Satnik Solutions
                         </font>
                 </br><br>
-                <font size="12px">Jln. Sunan kali jaga RT 08 RW 01  Dusun Ngipek Desa Kanigoro <br>  Kecamatan Pagelaran Kabupaten Malang <br>  Tlp. +62 857-0419-2502  - No Rek : 6769-4568953 - H. Nasuki</font>
+                <font size="12px">Jln. Raya Boteng No 09 Menganti Gresik <br> Prambon, Boboh, Kec. Menganti, Kabupaten Gresik, Jawa Timur 61174 <br> </font>
         </td>
     </tr>
 </table>

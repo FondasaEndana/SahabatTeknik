@@ -4,7 +4,7 @@
             <th class="babeng-min-row text-center">No</th>
             <th class="text-center">Aksi</th>
             <th>Nama</th>
-            <th class="text-center">Email</th>
+            <th class="text-center">Total Harga Jasa</th>
             <th class="text-center">Phone</th>
             <th class="text-center">Nama Service</th>
         </x-slot>
@@ -17,7 +17,7 @@
                         <x-btndelete link="{{route('admin.jasa.destroy', $item->id)}}"></x-btndelete>
                     </td>
                     <td>{{$item->name}}</td>
-                    <td class="babeng-min-row text-center">{{$item->email}}</td>
+                    <td class="babeng-min-row text-center">Rp {{ number_format($item->price, 2, ',', '.') }}</td>
                     <td class="babeng-min-row text-center">{{$item->phone}}</td>
                     <td class="babeng-min-row text-center">{{$item->service_type}}</td>
                 </tr>

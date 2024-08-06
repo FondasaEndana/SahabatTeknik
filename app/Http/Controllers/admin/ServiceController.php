@@ -24,6 +24,7 @@ class ServiceController extends Controller
             'phone' => 'required',
             'service_type' => 'required',
             'description' => 'required',
+            'price' => 'required|numeric',
         ]);
 
         ServiceRequest::create([
@@ -32,6 +33,7 @@ class ServiceController extends Controller
             'phone' => $request->phone,
             'service_type' => $request->service_type,
             'description' => $request->description,
+            'price' => $request->price,
         ]);
 
         return redirect()->route('admin.jasa')->with('status', 'Data berhasil ditambahkan!')->with('tipe', 'success')->with('icon', 'fas fa-feather');
@@ -57,15 +59,16 @@ class ServiceController extends Controller
             'phone' => 'required',
             'service_type' => 'required',
             'description' => 'required',
+            'price' => 'required|numeric',
         ]);
-    
-        // Gunakan metode update pada model
+
         $item->update([
             'name' => $request->name,
             'email' => $request->email,
             'phone' => $request->phone,
             'service_type' => $request->service_type,
             'description' => $request->description,
+            'price' => $request->price,
         ]);
 
         return redirect()->route('admin.jasa')->with('status', 'Data berhasil diupdate!')->with('tipe', 'success')->with('icon', 'fas fa-feather');

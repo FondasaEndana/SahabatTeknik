@@ -14,6 +14,16 @@
         </a>
         </li>
 
+        <li class="menu-item {{$pages=='jasa'?'active': ''}}">
+            <a
+                href="{{route('jasa')}}"
+                class="menu-link"
+            >
+            <i class="menu-icon fa-solid fa-hands-helping"></i>
+                <div data-i18n="Support">Jasa</div>
+            </a>
+            </li>
+
         <li class="menu-item {{$pages=='keranjang'?'active': ''}}">
             <a
                 href="{{route('pelanggan.transaksi.create')}}"

@@ -13,16 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('service_request', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('email');
-            $table->string('phone');
+        Schema::table('service_requests', function (Blueprint $table) {
             $table->integer('price')->default(0)->change();
-            $table->string('service_type');
-            $table->text('description');
-            $table->integer(11); 
-            $table->timestamps();
         });
     }
 
@@ -33,7 +25,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('service_request');
-        
+        Schema::table('service_requests', function (Blueprint $table) {
+            $table->integer('price')->default(null)->change();
+        });
     }
 };

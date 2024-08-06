@@ -48,9 +48,9 @@ function storeProduk(id = null, nama = null, harga_jual = null, stok = null, ter
         berat: berat,
         // terjual:terjual,
         // stoktersedia:stoktersedia,
-        jumlah: 0,
-        total: 0,
-        inputTerjual: 0,
+        jumlah: 1,
+        total: harga_jual,
+        inputTerjual: 1,
     }
     console.log(dataTemp, berat);
     //ambilDataLocalStorage

@@ -105,6 +105,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/admin/laporanpenjualan/cetak', [cetakController::class, 'penjualan_cetak'])->name('admin.laporanpenjualan.cetak');
     Route::get('/admin/laporanlaba', [laporanController::class, 'laba'])->name('admin.laporanlaba');
     Route::get('/admin/laporanlaba/cetak', [cetakController::class, 'laba_cetak'])->name('admin.laporanlaba.cetak');
+    Route::get('/admin/laporanjasa', [laporanController::class, 'jasa'])->name('admin.laporanjasa');
+    Route::get('/admin/laporanjasa/cetak', [cetakController::class, 'jasa_cetak'])->name('admin.laporanjasa.cetak');
+
+    
     // //invoice
     // Route::get('/admin/invoice', [invoiceController::class, 'index'])->name('admin.invoice');
     // Route::get('/admin/invoice/create', [invoiceController::class, 'create'])->name('admin.invoice.create');

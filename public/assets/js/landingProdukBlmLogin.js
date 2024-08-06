@@ -43,9 +43,9 @@ function storeProduk(id = null, nama = null, harga_jual = null, stok = null, ter
         stok: stok,
         // terjual:terjual,
         // stoktersedia:stoktersedia,
-        jumlah: 0,
-        total: 0,
-        inputTerjual: 0,
+        jumlah: 1,
+        total: harga_jual,
+        inputTerjual: 1,
     }
     //ambilDataLocalStorage
     //ubah menjadi array and object
@@ -189,7 +189,7 @@ function storeCariData(inputancari = '', inputanUrl = '#') {
 
                 contentResponse += `<a href="produk/${datas[i].slug}"  class="mb-2 ml-2 btn btn-primary addProduk">Detail</a>`;
                 if (datas[i].stoktersedia > 0) {
-                    contentResponse += `<button  class="btn btn-${datas[i].stoktersedia < 1 ? 'dark' : 'light'} addProduk " >Tambahkan ke Keranjang</button>`;
+                    
                 } else {
                     contentResponse += `<button  class="btn btn-${datas[i].stoktersedia < 1 ? 'dark' : 'light'} addProduk" onclick="return  confirm('Stok Habis!')">Tambahkan Keranjang</button>`;
 

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\produkdetail;
 use App\Models\restok;
 use App\Models\transaksi;
+use App\Models\ServiceRequest;
 use App\Models\transaksidetail;
 use Illuminate\Http\Request;
 
@@ -73,5 +74,31 @@ class apiLaporanController extends Controller
             'data'    => $items,
         ], 200);
 
+    }
+
+    public function jasa(Request $request){
+        $bln = $request->blnthn ? date('m', strtotime($request->blnthn)) : date('m');
+        $thn = $request->blnthn ? date('Y', strtotime($request->blnthn)) : date('Y');
+        $datas = ServiceRequest::whereMonth('created_at', $bln)
+            ->whereYear('created_at', $thn)
+            ->orderBy('created_at', 'desc')
+            ->get();
+        $items = [];
+        foreach ($datas as $data) {
+            $arr = null;
+            $arr['id'] = $data->id;
+            $arr['name'] = $data->name;
+            $arr['email'] = $data->email;
+            $arr['phone'] = $data->phone;
+            $arr['service_type'] = $data->service_type;
+            $arr['description'] = $data->description;
+            $arr['price'] = $data->price;
+            $arr['created_at'] = $data->created_at->format('Y-m-d');
+            $items[] = $arr;
+        }
+        return response()->json([
+            'success' => true,
+            'data' => $items,
+        ], 200);
     }
 }

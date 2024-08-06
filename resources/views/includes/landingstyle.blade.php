@@ -2,7 +2,7 @@
 <meta name="title" content="Sistem Penjualan Toko Bangunan">
 <meta name="author" content="BaemonTeam">
 <meta name="description" content="Sistem Penjualan Toko Bangunan">
-<meta name="keywords" content="Sistem Penjualan Toko Bangunan,bootstrap, bootstrap 5, bootstrap 5 one page, bootstrap 5 mobile application, one page template, bootstrap 5 one page template, themesberg, themesberg one page, one page template bootstrap 5" />
+<meta name="keywords" content="Toko Online Sahabat Teknik dan Layanan Jasa Instalasi dan Jasa Servis,bootstrap, bootstrap 5, bootstrap 5 one page, bootstrap 5 mobile application, one page template, bootstrap 5 one page template, themesberg, themesberg one page, one page template bootstrap 5" />
 <link rel="canonical" href="https://themesberg.com/product/bootstrap/swipe-free-mobile-app-one-page-bootstrap-5-template">
 
 <!-- Open Graph / Facebook -->

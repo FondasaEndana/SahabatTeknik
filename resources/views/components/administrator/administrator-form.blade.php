@@ -109,7 +109,7 @@
                     @if($tipeuser)
                     <option >{{old('tipeuser')?old('tipeuser'):$tipeuser}}</option>
                     @else
-                    <option disabled value=""> Pilih Jenis Kelamin</option>
+                    <option disabled value=""> Pilih Hak Akses</option>
                       @if (old('tipeuser'))
                       <option >{{old('tipeuser')}}</option>
                       @endif

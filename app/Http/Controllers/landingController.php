@@ -57,6 +57,7 @@ class landingController extends Controller
             'phone' => 'required',
             'service_type' => 'required',
             'description' => 'required',
+            //'price' => ''
         ]);
 
         ServiceRequest::create([
@@ -65,8 +66,9 @@ class landingController extends Controller
             'phone' => $request->phone,
             'service_type' => $request->service_type,
             'description' => $request->description,
+            'price' => 0
         ]);
 
-        return redirect()->route('jasa')->with('status', 'Data berhasil ditambahkan!')->with('tipe', 'success')->with('icon', 'fas fa-feather');
+        return redirect()->route('jasa')->with('status', 'Pengajuan Jasa berhasil Admin akan Mengkonfirmasi Pengajuan Anda')->with('tipe', 'success')->with('icon', 'fas fa-feather');
     }
 }

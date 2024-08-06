@@ -2,8 +2,8 @@
     <div class="row">
         <div class="col-6 collapse-brand">
             <a href="{{ url('/') }}">
-                {{-- <img src="{{ asset('/') }}assets/template/swipe/assets/img/dark.svg" alt="Logo dark"> --}}
-                <img src="{{ asset('/') }}assets/img/house.png" alt="Logo dark">
+                {{-- <img src="{{ asset('/') }}assets/img/BG_SahabatTeknik.png" alt="Logo dark"> --}}
+                <img src="{{ asset('/') }}assets/img/BG_SahabatTeknik.png" alt="Logo dark">
             </a>
         </div>
         <div class="col-6 collapse-close">
@@ -22,16 +22,31 @@
             Produk
         </a>
     </li>
+
     <li class="nav-item">
         <a href="{{route('jasa')}}" class="nav-link">
             Jasa
         </a>
     </li>
+
     <li class="nav-item">
         <a href="{{route('keranjang')}}" class="nav-link">
             Keranjang
         </a>
     </li>
+
+    <li class="nav-item d-lg-none">
+        @if (Auth::check())
+            <a href="{{route('dashboard')}}" class="nav-link">
+                Dashboard
+            </a>
+        @else
+            <a href="{{route('login')}}" class="nav-link">
+                Login
+            </a>
+        @endif
+    </li>
+
     {{-- <li class="nav-item">
         <a href="#testimonials" class="nav-link">
             Portofolio

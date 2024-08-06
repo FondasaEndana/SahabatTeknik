@@ -14,6 +14,6 @@ class ServiceRequest extends Model
         use HasFactory;
 
     protected $fillable = [
-        'name', 'email', 'phone', 'service_type', 'description'
+        'name', 'email', 'phone', 'service_type', 'description', 'price'
     ];
 }

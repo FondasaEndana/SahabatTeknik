@@ -5,6 +5,7 @@ namespace App\Http\Controllers\dev;
 use App\Http\Controllers\Controller;
 use App\Models\restok;
 use App\Models\transaksi;
+use App\Models\ServiceRequest; // Pastikan model ini diimpor dengan benar
 use Illuminate\Http\Request;
 use PDF;
 
@@ -16,9 +17,8 @@ class cetakController extends Controller
         $tgl=date("YmdHis");
         $pdf = PDF::loadview('pages.dev.testing.cetak2',compact('items'))->setPaper('a4', 'potrait');
         return $pdf->stream('data'.$tgl.'.pdf');
-        // dd('invoice',$items);
-        // return view('dev.cetak.index');
     }
+
     public function restok_cetak(Request $request){
         $bln=$request->blnthn?date('m',strtotime($request->blnthn)):date('m');
         $thn=$request->blnthn?date('Y',strtotime($request->blnthn)):date('Y');
@@ -31,7 +31,6 @@ class cetakController extends Controller
         ->orderBy('id','desc')
         ->get();
         $tgl=date("YmdHis");
-        // dd($bln,$thn,$items);
         $pdf = PDF::loadview('pages.admin.laporan.restokcetak',compact('items','blnthn','bln','thn'))->setPaper('a4', 'potrait');
         return $pdf->stream('data'.$tgl.'.pdf');
     }
@@ -48,8 +47,20 @@ class cetakController extends Controller
         ->orderBy('id','desc')
         ->get();
         $tgl=date("YmdHis");
-        // dd($bln,$thn,$items);
         $pdf = PDF::loadview('pages.admin.laporan.penjualancetak',compact('items','blnthn','bln','thn'))->setPaper('a4', 'potrait');
+        return $pdf->stream('data'.$tgl.'.pdf');
+    }
+
+    public function jasa_cetak(Request $request){
+        $bln=$request->blnthn?date('m',strtotime($request->blnthn)):date('m');
+        $thn=$request->blnthn?date('Y',strtotime($request->blnthn)):date('Y');
+        $blnthn=$request->blnthn?$request->blnthn:date('Y-m');
+        $items = ServiceRequest::whereMonth('created_at', $bln)
+            ->whereYear('created_at', $thn)
+            ->orderBy('created_at', 'desc')
+            ->get();
+        $tgl = date("YmdHis");
+        $pdf = PDF::loadview('pages.admin.laporan.jasaCetak',compact('items','blnthn','bln','thn'))->setPaper('a4', 'potrait');
         return $pdf->stream('data'.$tgl.'.pdf');
     }
 }

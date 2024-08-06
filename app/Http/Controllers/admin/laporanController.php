@@ -5,6 +5,7 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use App\Models\restok;
 use App\Models\transaksi;
+use App\Models\ServiceRequest;
 use Illuminate\Http\Request;
 
 class laporanController extends Controller
@@ -21,6 +22,18 @@ class laporanController extends Controller
             ->get();
         // dd($items);
         return view('pages.admin.laporan.restok', compact('items', 'request', 'pages'));
+    }
+
+    public function jasa(Request $request)
+    {
+        $pages = 'laporanjasa';
+        $bulan = $request->input('bulan', date('m'));
+        $tahun = $request->input('tahun', date('Y'));
+
+        $items = ServiceRequest::whereMonth('created_at', $bulan)
+            ->whereYear('created_at', $tahun)
+            ->get();
+        return view('pages.admin.laporan.jasa', compact('items', 'request', 'pages'));
     }
 
     public function penjualan(Request $request)

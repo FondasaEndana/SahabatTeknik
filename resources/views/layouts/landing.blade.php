@@ -35,8 +35,8 @@
     <nav id="navbar-main" aria-label="Primary navigation" class="navbar navbar-main navbar-expand-lg navbar-theme-primary headroom navbar-light navbar-theme-secondary">
         <div class="container position-relative">
             <a class="navbar-brand mr-lg-4" href="{{ url('/') }}">
-                <img class="navbar-brand-dark" src="{{ asset('/') }}assets/img/house.png" alt="Logo light">
-                <img class="navbar-brand-light" src="{{ asset('/') }}assets/img/house.png"alt="Logo dark">
+                <img class="navbar-brand-dark" src="{{ asset('/') }}assets/img/original_satnikk.png" alt="Logo light">
+                <img class="navbar-brand-light" src="{{ asset('/') }}assets/img/original_satnikk.png"alt="Logo dark">
                 {{-- <img class="navbar-brand-dark" src="{{ asset('/') }}assets/template/swipe/assets/img/light.svg" alt="Logo light">
                 <img class="navbar-brand-light" src="{{ asset('/') }}assets/template/swipe/assets/img/dark.svg" alt="Logo dark"> --}}
             </a>
@@ -70,8 +70,7 @@
     </main>
 
     <footer class="footer py-5 pt-lg-6">
-    <div class="sticky-left d-flex align-items-center bg-white p-3 pt-4 px-4 border border-soft shadow-sm rounded">
-    </div>
+    
     <div class="sticky-right">
         <a href="#home" class="icon icon-primary icon-md btn btn-icon-only btn-white border border-soft shadow-soft animate-up-3">
             <span class="fas fa-chevron-up"></span>
@@ -82,11 +81,11 @@
         <div class="row pt-2 pt-lg-5">
             <div class="col mb-md-0">
                 <a href="#" target="_blank" class="d-flex justify-content-center">
-                    <img src="{{ asset('/') }}assets/template/swipe/assets/img/themesberg.svg" height="25" class="mb-3" alt="Themesberg Logo">
+                    <img src="{{ asset('/') }}assets/img/original_satnikk.png" height="25" class="mb-3" alt="Themesberg Logo">
                 </a>
             <div class="d-flex text-center justify-content-center align-items-center" role="contentinfo">
-                <p class="font-weight-normal font-small mb-0">Copyright © Tim Dev-<span class="current-year">2024</span>. All rights reserved.</p>
-                </div>
+                <p class="font-weight-normal font-small mb-0">SATNIK IT SOLUTIONS - <span class="current-year">2024</span></p>
+                </div> 
             </div>
         </div>
     </div>
